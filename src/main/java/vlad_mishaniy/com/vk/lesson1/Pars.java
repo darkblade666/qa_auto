@@ -35,7 +35,7 @@ public class Pars {
             System.out.println("----------NEXT TEST----------");
             System.out.println("Enter five symbols");
             Scanner scannerC = new Scanner(System.in);
-            String parsC = scannerB.next();
+            String parsC = scannerC.next();
             StringTokenizer stringTokenizer = new StringTokenizer(parsC, "1234567890", true);
             while (stringTokenizer.hasMoreTokens()){
                 System.out.println(stringTokenizer.nextToken());
