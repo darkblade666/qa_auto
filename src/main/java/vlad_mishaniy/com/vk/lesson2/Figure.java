@@ -21,7 +21,7 @@ public class Figure {
                 if (j==x) b=false;
                 System.out.print("*");
             }
-            System.out.println("*");
+            System.out.println("");
         }
     }
 }
