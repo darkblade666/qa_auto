@@ -48,11 +48,11 @@ public class Car {
         this.engine = engine;
     }
 
-    public boolean start(boolean x){
-        return x;
+    public boolean start(boolean start){
+        return start;
     }
 
-    public boolean stop(boolean y){
-        return y;
+    public boolean stop(boolean stop){
+        return stop;
     }
 }
