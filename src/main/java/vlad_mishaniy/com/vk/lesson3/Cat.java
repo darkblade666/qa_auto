@@ -1,19 +1,22 @@
 package main.java.vlad_mishaniy.com.vk.lesson3;
 
+import java.util.Random;
+
 /**
  * Created by kip_notebook on 11.11.2015.
  */
 public class Cat {
     private int age, weight;
-    private String name;
+    private String name, color;
     private boolean sex;
 
     public Cat(){}
-    public Cat(int Age, int Weight, String Name, boolean Sex){
-        this.age = Age;
-        this.weight = Weight;
-        this.name = Name;
-        this.sex = Sex;
+    public Cat(int age, int weight, String color, String name, boolean sex){
+        this.age = age;
+        this.weight = weight;
+        this.color = color;
+        this.name = name;
+        this.sex = sex;
     }
 
     public int getAge() {
@@ -30,6 +33,14 @@ public class Cat {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public String getName() {
@@ -49,10 +60,34 @@ public class Cat {
     }
 
     public void voice(){
-        System.out.println("Myau-Myau");
+        System.out.println(this.getName() + " " + " = say mayu-myau");
     }
 
-    public String returnCustomVoice(String customVoice){
-        return customVoice;
+
+    public Cat makeLove(Cat anotherCat){
+        if ((this.isSex() == true) && (anotherCat.isSex() == true)){
+            System.out.println(this.getName() + " vs " + anotherCat.getName() + " = fight");
+        }
+        if ((this.isSex() == false) && (anotherCat.isSex() == false)){
+            System.out.println(this.getName() + " vs " + anotherCat.getName() + " = say haha");
+        }
+        if ((this.isSex() != anotherCat.isSex())){
+            Random rn = new Random();
+            Cat myLittleCat = new Cat(0, 1, "color", "kitten", rn.nextBoolean());
+            System.out.println("New cat has been created!");
+            return myLittleCat;
+        }
+        return null;
+    }
+
+    public Cat fight(Cat opponent){
+        if (this.getWeight() < opponent.getWeight()){
+            return opponent;
+        }
+
+        if (this.getWeight() > opponent.getWeight()){
+            return this;
+        }
+        return null;
     }
 }

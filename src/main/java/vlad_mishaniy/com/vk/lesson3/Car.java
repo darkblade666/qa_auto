@@ -4,8 +4,8 @@ package main.java.vlad_mishaniy.com.vk.lesson3;
  * Created by kip_notebook on 11.11.2015.
  */
 public class Car {
-    String name, color, manufavteur;
-    int engine;
+    private String name, color, manufavteur;
+    private int engine;
 
     public Car(){}
 
