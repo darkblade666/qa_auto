@@ -7,7 +7,7 @@ package main.java.vlad_mishaniy.com.vk.lesson3;
 public class Main {
     public static void main(String ... args){
         Cat barsik = new Cat(2, 13, "white", "barsik", true);
-        Cat murzik = new Cat(7, 10, "black", "murzik", true);
+        Cat murzik = new Cat(7, 13, "black", "murzik", true);
         Cat murka = new Cat(5, 8, "black", "murka", false);
 
         murka.voice();

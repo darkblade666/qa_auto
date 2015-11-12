@@ -88,6 +88,9 @@ public class Cat {
         if (this.getWeight() > opponent.getWeight()){
             return this;
         }
+        if (this.getWeight() == opponent.getWeight()){
+            return new Cat(0, 0, null, "Draw", false);
+        }
         return null;
     }
 }
